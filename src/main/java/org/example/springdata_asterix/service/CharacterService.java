@@ -17,7 +17,7 @@ public class CharacterService {
         this.characterRepository = characterRepository;
     }
 
-    public Character getCharacterById(String id) {
+    public CharacterRecord getCharacterById(String id) {
         return characterRepository.getCharacterRecordById(id);
     }
 

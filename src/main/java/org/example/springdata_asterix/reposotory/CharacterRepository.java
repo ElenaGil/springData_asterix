@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface CharacterRepository extends MongoRepository<CharacterRecord, String> {
     CharacterRecord getCharacterByName(String name);
 
-    Character getCharacterRecordById(String id);
+    CharacterRecord getCharacterRecordById(String id);
 }
