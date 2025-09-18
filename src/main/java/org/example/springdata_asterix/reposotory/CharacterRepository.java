@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CharacterRepository extends MongoRepository<CharacterRecord, String> {
-    CharacterRecord getCharacterByName(String name);
-
     CharacterRecord getCharacterRecordById(String id);
+
+    void removeById(String id);
 }

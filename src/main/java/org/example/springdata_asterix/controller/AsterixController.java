@@ -19,12 +19,12 @@ public class AsterixController {
 
     @GetMapping("/characters")
     public List<CharacterRecord> getCharacters() {
-        return characterService.findAll();
+        return characterService.findAllCharacters ();
     }
 
     @GetMapping("/characters/{id}")
     public CharacterRecord getCharacterById(@PathVariable String id) {
-        return characterService.getCharacterById(id);
+        return characterService.findCharacterById(id);
     }
 
     @DeleteMapping("/characters/{id}")
@@ -42,6 +42,6 @@ public class AsterixController {
 
     @PostMapping
     public CharacterRecord createCharacter(@RequestBody CharacterRecordDto characterRecordDto) {
-        return characterService.save(characterRecordDto);
+        return characterService.addCharacter(characterRecordDto);
     }
 }
